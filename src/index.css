@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    color: #cacfcf;
+    text-decoration: underline;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 5px solid #cacfcf;
+  }
+  
+  header h1 {
+    font-size: 5vw; 
+  }
+  
+  header h3 {
+    font-size: 4.5vw; 
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(78, 119, 119);
+  }
+  
+  .Main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 25px;
+    width: 100%;
+    color: #cacfcf;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    border: 2px solid;
+    padding: 15px;
+    border-radius: 15px;
+    width: 100%; 
+    max-width: 300px; 
+    box-sizing: border-box;
+  }
+  
+  .card h1 {
+    border-bottom: 5px solid;
+    margin-bottom: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 7vw; 
+    }
+  
+    header h3 {
+      font-size: 3.5vw; 
+    }
+  
+    .Main {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 10vw; 
+    }
+  
+    header h3 {
+      font-size: 5vw; 
+    }
+  
+    .card {
+      width: 100%; 
+    }
+  }
+
+  /* From Uiverse.io by dhruv465 */ 
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  position: fixed;
+  top: 50%;
+  right: 50%;
+}
+
+/* Add some glow effect */
+.loader::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 20px #3498db;
+}
+
+/* Rotate the circle */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
